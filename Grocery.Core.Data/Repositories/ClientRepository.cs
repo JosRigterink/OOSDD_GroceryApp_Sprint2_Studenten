@@ -20,13 +20,12 @@ namespace Grocery.Core.Data.Repositories
 
         public Client? Get(string email)
         {
-            //return clientList[0];
+            //zoekt email addres ongeacht grote of kleine letters
             return clientList.FirstOrDefault(c => c.EmailAddress.Equals(email, StringComparison.OrdinalIgnoreCase));
         }
 
         public Client? Get(int id)
         {
-            //return clientList[0];
             return clientList.FirstOrDefault(c => c.Id == id);
         }
 
