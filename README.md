@@ -31,4 +31,41 @@ De opdracht is om zelfstandig de login functionaliteit te laten werken.
 6. In App.xaml.cs staat /*LoginViewModel viewModel*/ haal hier /* en */ weg, zodat het LoginViewModel beschikbaar komt.  
 7. In App.xaml.cs staat //MainPage = new LoginView(viewModel); Haal hier de // weg en zet de regel erboven in commentaar, zodat AppShell wordt uitgeschakeld.  
 8. Uncomment de route naar het Login scherm in AppShell.xaml.cs: //Routing.RegisterRoute("Login", typeof(LoginView)); 
- 
+s
+ README – Gitflow Workflow
+Branching strategie
+
+Deze repository gebruikt de Gitflow branching-strategie om softwareontwikkeling gestructureerd en overzichtelijk te laten verlopen.
+
+De belangrijkste branches zijn:
+
+main
+Bevat altijd de stabiele en productieklare versie van de code.
+Nieuwe releases worden hierop gemerged vanuit de release branch.
+
+development
+Integratiebranch waarin alle nieuwe functionaliteiten en fixes samenkomen.
+Nieuwe features en fixes starten altijd vanaf deze branch.
+
+Ondersteunende branches
+Feature branches
+
+Doel: ontwikkelen van nieuwe functionaliteiten.
+
+Startpunt: development.
+
+Naamgeving: feature/<naam> of feature/<usecase>.
+
+In deze repository worden o.a. de volgende features ontwikkeld:
+
+feature/UC05
+
+feature/UC06
+
+Na afronden: merge terug naar development via een pull request.
+
+Release branches
+
+Doel: voorbereiden van een nieuwe release (testen, documentatie, laatste fixes).
+
+Startpunt: development.
